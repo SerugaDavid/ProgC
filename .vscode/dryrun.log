@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/david/Desktop/progC'
+make: Leaving directory '/home/david/Desktop/progC'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
