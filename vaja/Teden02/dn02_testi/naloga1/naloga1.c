@@ -1,40 +1,46 @@
 #include <stdio.h>
 
-char * read_word(char out[1000]) {
-    //char out[1000];
+int main() {
     char c = getchar();
-    for (int i = 0; i < 1000; i++)
-    {
-        out[i] = c;
-        if (c == '\n' || c == ' ')
-            break;
+    char prev = ' ';
+    char prevPrev = ' ';
+    int notFailed = 1;
+    while (c != '\n') {
+        if (c == ' ') {
+            if (prev == '+' || prev == '-')
+                notFailed = 0;
+            putchar('0' + notFailed);
+            prevPrev = prev;
+            prev = c;
+            c = getchar();
+            notFailed = 1;
+            continue;
+        }
+        if (!notFailed) {
+            prevPrev = prev;
+            prev = c;
+            c = getchar();
+            continue;
+        }
+        if (c == '-' || c == '+') {
+            if (!(prev == ' '))
+                notFailed = 0;
+        } else if (c == '0') {
+            if (!(prev == ' ' || prev == '-' || prev == '+' || (prev >= '1' && prev <= '9') || (prev == '0' && prevPrev >= '0' && prevPrev <= '9')))
+                notFailed = 0;
+        } else if (c >= '1' && c <= '9') {
+            if (!(prev == ' ' || prev == '-' || prev == '+' || (prev >= '1' && prev <= '9') || (prev == '0' && prevPrev >= '0' && prevPrev <= '9')))
+                notFailed = 0;
+        } else {
+            notFailed = 0;
+        }
+        prevPrev = prev;
+        prev = c;
         c = getchar();
     }
-    return out;
-}
-
-int end(char * word) {
-    char c;
-    for (int i = 0; i < 1000; i++)
-    {
-        c = *(word + i);
-        if (c == '\n')
-            return 1;
-        if (c == ' ')
-            break;
-    }
-    return 0;    
-}
-
-int main() {
-    char * word;
-    do
-    {
-        word = read_word(word);
-        printf("%s\n", word);
-    } while (!end(word));
-    
-    
-    
+    if (prev == '+' || prev == '-')
+        notFailed = 0;
+    putchar('0' + notFailed);
+    putchar('\n');
     return 0;
 }
