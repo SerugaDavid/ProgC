@@ -2,15 +2,17 @@ import subprocess
 import sys
 
 
-def get_text(type, num_of_tests):
+def get_text(type):
     texts = []
-    for i in range(1, num_of_tests + 1):
+    for i in range(1, 1000):
         try:
             file = open("test{:02d}.{}".format(i, type), "r")
             texts.append("".join(file.readlines()))
             file.close
         except:
-            pass
+            if i == 0:
+                return []
+            break
     return texts
 
 
@@ -55,10 +57,10 @@ def functionTests(outs, num_of_tests, prog_name):
 
 
 def main():
-    num_of_tests = 10
     prog_name = sys.argv[1]
-    ins = get_text("in", num_of_tests)
-    outs = get_text("out", num_of_tests)
+    outs = get_text("out")
+    num_of_tests = len(outs)
+    ins = get_text("in")
     if (len(ins) == len(outs)):
         inOutTests(ins, outs, num_of_tests, prog_name)
     else:
