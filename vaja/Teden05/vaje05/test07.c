@@ -4,7 +4,7 @@
 
 #include "naloga.h"
 
-int __main__() {
+int main() {
     int* frekvence;
     frekvenceCrk("baNanA", &frekvence);
     for (int c = 'A';  c <= 'Z';  c++) {

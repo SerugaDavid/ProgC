@@ -8,7 +8,7 @@
 
 int globalna[N];
 
-int __main__() {
+int main() {
     int indeks = 100;
     int* kazalec;
 

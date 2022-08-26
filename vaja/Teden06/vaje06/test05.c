@@ -10,7 +10,7 @@ void pozeni(char* niz, char znak) {
     free(kopija);
 }
 
-int __main__() {
+int main() {
     char* niz = "svoje_delo_oddajte_najkasneje_do_nedelje";
 
     pozeni(niz, '_');

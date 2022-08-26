@@ -10,7 +10,7 @@ void pozeni(char* niz, char znak) {
     free(kopija);
 }
 
-int __main__() {
+int main() {
     char* niz = "prijazen niz z enim samim presledkom med besedami";
 
     pozeni(niz, ' ');

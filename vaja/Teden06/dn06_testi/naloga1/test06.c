@@ -6,7 +6,7 @@
 
 char* NIZI[] = {"C", "java", "python", "pascal", "javascript", "PHP", NULL};
 
-int __main__() {
+int main() {
     char* niz = zdruzi(NIZI, "");
     printf("<%s>\n", niz);
 

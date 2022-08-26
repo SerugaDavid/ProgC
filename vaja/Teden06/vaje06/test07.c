@@ -14,7 +14,7 @@ void pozeni(char* niz, char locilo) {
     free(odseki);
 }
 
-int __main__() {
+int main() {
     char* niz = "prijazen niz z enim samim presledkom med besedami";
     pozeni(niz, ' ');
 

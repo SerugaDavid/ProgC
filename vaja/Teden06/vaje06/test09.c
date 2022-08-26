@@ -15,7 +15,7 @@ void pozeni(char* niz, char locilo) {
     printf("----------\n");
 }
 
-int __main__() {
+int main() {
     char* niz1 = "";
     char* niz2 = ";";
 

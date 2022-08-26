@@ -4,7 +4,7 @@
 
 #include "naloga1.h"
 
-int __main__() {
+int main() {
     int tabela[] = {0, 3, 5, 2, 7, 1, -6, -4, 7, 2, -6, 9, -9, 0};
     int n = 0;
     int* pk = NULL;

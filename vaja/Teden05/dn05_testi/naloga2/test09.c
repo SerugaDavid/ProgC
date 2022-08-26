@@ -4,7 +4,7 @@
 
 #include "naloga2.h"
 
-int __main__() {
+int main() {
     int a = 24;
     int b = 12;
     int c = 36;

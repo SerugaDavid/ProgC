@@ -6,7 +6,7 @@
 
 char* NIZ = "A quick brown fox jumps over the lazy dog.";
 
-int __main__() {
+int main() {
     int* frekvence;
     frekvenceCrk(NIZ, &frekvence);
     for (int c = 'A';  c <= 'Z';  c++) {

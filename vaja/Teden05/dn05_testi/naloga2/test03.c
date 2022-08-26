@@ -4,7 +4,7 @@
 
 #include "naloga2.h"
 
-int __main__() {
+int main() {
     int a = 42;
     int b = -42;
     int* pa = &a;

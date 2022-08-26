@@ -4,7 +4,7 @@
 
 #include "naloga.h"
 
-int __main__() {
+int main() {
     int* t = malloc(10 * sizeof(int));
 
     int indeks = -1;

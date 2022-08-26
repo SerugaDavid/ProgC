@@ -6,7 +6,7 @@
 
 char* NIZI[] = {"", "123", "4567", "8901", "2", "34", "", "567890", NULL};
 
-int __main__() {
+int main() {
     char* niz = zdruzi(NIZI, " | ");
     printf("<%s>\n", niz);
 

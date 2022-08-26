@@ -12,11 +12,18 @@ gcc -e__main__ -o test01 test01.c naloga2.c
 #include "naloga2.h"
 
 void zamenjaj(int** a, int** b) {
-    // dopolnite ...
+    int *tmp = *a;
+    *a = *b;
+    *b = tmp;
 }
 
 void uredi(int** a, int** b, int** c) {
-    // dopolnite ...
+    if (**a > **b)
+        zamenjaj(a, b);
+    if (**b > **c)
+        zamenjaj(b, c);
+    if (**a > **b)
+        zamenjaj(a, b);
 }
 
 int main() {

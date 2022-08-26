@@ -14,8 +14,12 @@ gcc -e__main__ -o test01 test01.c naloga1.c
 #include "naloga1.h"
 
 int* poisci(int* t, int* dolzina, int** konec) {
-    // popravite / dopolnite ...
-    return NULL;
+    int curr;
+    while (*(--t) != 0) {}
+    int * out = ++t;
+    for(*dolzina = 0; *(t++) != 0; *dolzina += 1) {}
+    *konec = t-2;
+    return out;
 }
 
 int main() {
