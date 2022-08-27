@@ -12,7 +12,7 @@ int TABELA[][N] = {
     {21, 10, 18, 22,  4, 28}
 };
 
-int __main__() {
+int main() {
     int izvornoStVrstic = sizeof(TABELA) / sizeof(TABELA[0]);
     int ciljnoStVrstic = 6;
     int** rezultat = ap2pp(TABELA, izvornoStVrstic, ciljnoStVrstic);

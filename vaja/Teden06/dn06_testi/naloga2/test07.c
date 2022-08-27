@@ -8,7 +8,7 @@ int* TABELA[] = {
     (int[]) {10, 15, 8, 5, 17, 6, 0},
 };
 
-int __main__() {
+int main() {
     int izvornoStVrstic = sizeof(TABELA) / sizeof(TABELA[0]);
     int ciljnoStVrstic = 0;
     int(*rezultat)[N] = pp2ap(TABELA, izvornoStVrstic, &ciljnoStVrstic);

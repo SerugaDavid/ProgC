@@ -18,7 +18,7 @@ int* TABELA[] = {
     (int[]) {46, 47, 48, 49, 50, 51, 52, 53, 54, 55,  0},
 };
 
-int __main__() {
+int main() {
     int izvornoStVrstic = sizeof(TABELA) / sizeof(TABELA[0]);
     int ciljnoStVrstic = 0;
     int(*rezultat)[N] = pp2ap(TABELA, izvornoStVrstic, &ciljnoStVrstic);
