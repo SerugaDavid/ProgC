@@ -5,7 +5,7 @@
 
 #include "naloga2.h"
 
-int __main__() {
+int main() {
     A* a1 = malloc(sizeof(A));
     a1->p = 663;
     B* b1 = malloc(sizeof(B));

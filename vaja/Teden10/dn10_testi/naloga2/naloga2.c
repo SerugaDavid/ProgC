@@ -7,7 +7,22 @@
 #include "naloga2.h"
 
 int izpisiA(A* a, char* cilj) {
-    // popravite / dopolnite ...
+    /** TO DO 
+     * Naj bodo rekurzivne funkcije, ker ima to smisel
+     * 
+     * kako gradit tak string?
+     * ko napišeš svoje veš kok je dolgo, tk da ko kličeš rekurzivno naprej sam podaj cilj, ki je cilj + dolžina trenutnega stringa
+     * in za njim zaključiš zaklepaje
+     * 
+     * returnaš svojo dolžino + rekurzivno dolžino
+     * 
+     * funkcije:
+     * izpisiA(A* a, char* cilj);
+     * izpisiB(B* b, char* cilj);
+     * izpisiC(C* c, char* cilj);
+     * 
+     * done
+     * **/
     return -9999;
 }
 
