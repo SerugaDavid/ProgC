@@ -9,7 +9,7 @@ void izvedi(Tocka t, Premica p) {
     printf("(%d/%d, %d/%d)\n", proj.x.st, proj.x.im, proj.y.st, proj.y.im);
 }
 
-int __main__() {
+int main() {
     izvedi( (Tocka) {{-3, 8}, {-9, 4}}, (Premica) {false, {-6, 7}, {-5, 2}} );
     exit(0);
     return 0;
