@@ -54,7 +54,7 @@ void testiraj(Vozlisce* v) {
     pocisti(v);
 }
 
-int __main__() {
+int main() {
     testiraj(zgradi((int[]) {INT_MAX}));
     testiraj(zgradi((int[]) {0, INT_MAX}));
     testiraj(zgradi((int[]) {42, INT_MAX}));

@@ -20,7 +20,7 @@ void izpisi(Student** studentje, int stStudentov) {
     printf("\n");
 }
 
-int __main__() {
+int main() {
     Student* studentje[] = {
         (Student[]) {333, (PO[]){{"FIZ", 10}, {"P1", 7}, {"P2", 8}, {"ODV", 9}, {"", 0}}, 4},
         (Student[]) {888, (PO[]){{"", 0}}, 0},

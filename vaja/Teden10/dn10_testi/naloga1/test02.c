@@ -65,7 +65,7 @@ void pocisti(Vozlisce* v) {
     }
 }
 
-int __main__() {
+int main() {
     int tabela[] = {911, 891, 727};
     int n = sizeof(tabela) / sizeof(int);
     int k = 1;

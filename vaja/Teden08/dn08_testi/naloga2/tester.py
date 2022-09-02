@@ -79,7 +79,7 @@ def functionTests(outs, num_of_tests, start, prog_name):
         else:
             correct += 1
     print()
-    #make_main("{}.c".format(prog_name))
+    make_main("{}.c".format(prog_name))
     print("{}/{}: {:.2f}%".format(correct, num_of_tests - start, correct/(num_of_tests - start)*100))
 
 

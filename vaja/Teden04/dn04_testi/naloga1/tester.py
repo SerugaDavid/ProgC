@@ -1,5 +1,6 @@
 import subprocess
 import sys
+from venv import create
 
 
 def get_text(type):
@@ -40,13 +41,32 @@ def inOutTests(ins, outs, num_of_tests, start, prog_name):
         else:
             correct += 1
     print()
-    print("{}/{}: {}%".format(correct, num_of_tests - start, correct/(num_of_tests - start)*100))
+    print("{}/{}: {:.2f}%".format(correct, num_of_tests - start, correct/(num_of_tests - start)*100))
+
+
+def make_main(filename):
+    with open(filename, 'r', encoding="utf-8") as file:
+        filedata = file.read()
+    filedata = filedata.replace("__main__()", "main()")
+    with open(filename, 'w', encoding="utf-8") as file:
+        file.write(filedata)
+
+
+def delete_main(filename):
+    with open(filename, 'r',encoding="utf-8") as file:
+        filedata = file.read()
+    filedata = filedata.replace("main()", "__main__()")
+    with open(filename, 'w',encoding="utf-8") as file:
+        file.write(filedata)
+
 
 
 def functionTests(outs, num_of_tests, start, prog_name):
+    delete_main("{}.c".format(prog_name))
     correct = 0
     for i in range(start, num_of_tests):
-        compiled = subprocess.run(["gcc", "test{:02d}.c".format(i + 1), "{}.c".format(prog_name), "-lm", "-w"])
+        make_main("test{:02d}.c".format(i + 1))
+        compiled = subprocess.run(["gcc", "test{:02d}.c".format(i + 1), "{}.c".format(prog_name), "-lm"])
         if compiled.returncode != 0:
             continue
         proces = subprocess.Popen([r"a.exe"], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
@@ -59,7 +79,8 @@ def functionTests(outs, num_of_tests, start, prog_name):
         else:
             correct += 1
     print()
-    print("{}/{}: {}%".format(correct, num_of_tests - start, correct/(num_of_tests - start)*100))
+    make_main("{}.c".format(prog_name))
+    print("{}/{}: {:.2f}%".format(correct, num_of_tests - start, correct/(num_of_tests - start)*100))
 
 
 def main():

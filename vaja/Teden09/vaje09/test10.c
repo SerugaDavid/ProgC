@@ -30,7 +30,7 @@ void pocisti(Student** studentje, int stStudentov) {
     }
 }
 
-int __main__() {
+int main() {
     Student* studentje[10];
     int stStudentov = 0;
 
