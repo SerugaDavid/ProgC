@@ -1,0 +1,8 @@
+kratka
+malo daljsa vrstica
+d0l64 vrst1c4 5 st3v1lk4m1 v b35ed1lu
+najdaljsa vrstica, ki jo lahko najdemo v tej datoteki in je dolga 75 znakov
+EOF
+vrstica 6
+vrstica 7
+konec datoteke
